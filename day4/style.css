@@ -1,0 +1,156 @@
+
+/* 1. Default theme colours */
+:root {
+  --bg-color: #f4f6f8;
+  --card-color: #ffffff;
+  --text-color: #222222;
+  --muted-color: #666666;
+  --border-color: #cccccc;
+  --button-color: #8e0000;
+  --button-hover: #6b0000;
+}
+
+/* 2. Dark theme colours */
+body.dark {
+  --bg-color: #181818;
+  --card-color: #252525;
+  --text-color: #f5f5f5;
+  --muted-color: #bbbbbb;
+  --border-color: #555555;
+  --button-color: #bb4545;
+  --button-hover: #d15a5a;
+}
+
+/* 3. Basic page styling */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 4. Header and footer */
+header {
+  background-color: var(--button-color);
+  color: white;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin-bottom: 0;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted-color);
+  padding: 16px;
+}
+
+/* 5. Main content card */
+main {
+  max-width: 640px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+section {
+  background-color: var(--card-color);
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+/* 6. Text area */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font: inherit;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: 2px solid var(--button-color);
+  outline-offset: 2px;
+}
+
+/* 7. Counters */
+#char-count,
+#word-count {
+  color: var(--muted-color);
+  font-size: 0.95rem;
+}
+
+.warning {
+  color: #d97706 !important;
+}
+
+.over {
+  color: #dc2626 !important;
+  font-weight: bold;
+}
+
+/* 8. Buttons */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+button {
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--text-color);
+  outline-offset: 3px;
+}
+
+/* 9. Smaller screens */
+@media (max-width: 600px) {
+  main {
+    margin: 18px auto;
+  }
+
+  section {
+    padding: 18px;
+  }
+}
